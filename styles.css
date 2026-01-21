@@ -1,0 +1,154 @@
+:root {
+  --bg: #0b1220;
+  --surface: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+  --radius: 16px;
+}
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #020617;
+  --muted: #475569;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+}
+
+.calculator {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 24px;
+  width: 320px;
+}
+
+#display {
+  display: block;
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: black;
+  border-radius: 12px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  padding: 16px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  background: #1f2933;
+  color: var(--text);
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button.accent {
+  background: var(--accent);
+  color: black;
+}
+
+button.wide {
+  grid-column: span 2;
+}
+
+.currency {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.currency input,
+.currency select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* ============================= */
+/* Display micro-animation       */
+/* ============================= */
+
+#display.pulse {
+  animation: pulse 0.15s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button:active {
+  transform: scale(0.97);
+}
+/* ============================= */
+/* Theme toggle button           */
+/* ============================= */
+
+#themeToggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  font-size: 18px;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--surface);
+  color: var(--text);
+
+  border: 1px solid var(--muted);
+  cursor: pointer;
+
+  z-index: 1000;
+}
+
+#themeToggle:hover {
+  filter: brightness(1.1);
+}

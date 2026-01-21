@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Precision Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+<link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+  <main class="app">
+<button id="themeToggle" aria-label="Toggle theme">🌓</button>
+
+    <section class="calculator" aria-label="Calculator">
+      <output id="display" aria-live="polite">0</output>
+
+      <div class="keypad" id="keypad">
+        <!-- Operators -->
+        <button data-action="clear">AC</button>
+        <button data-action="delete">⌫</button>
+        <button data-value="%">%</button>
+        <button data-value="/">÷</button>
+
+        <!-- Numbers -->
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="*">×</button>
+
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="-">−</button>
+
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="+">+</button>
+
+        <button data-value="0" class="wide">0</button>
+        <button data-value=".">.</button>
+        <button data-action="equals" class="accent">=</button>
+      </div>
+    </section>
+
+    <aside class="currency">
+      <h2>Currency Converter</h2>
+
+      <input type="number" id="amount" placeholder="Amount" />
+
+      <div class="row">
+       <select id="from">
+  <option value="USD">USD</option>
+  <option value="PKR">PKR</option>
+  <option value="EUR">EUR</option>
+</select>
+
+<select id="to">
+  <option value="PKR">PKR</option>
+  <option value="USD">USD</option>
+  <option value="EUR">EUR</option>
+</select>
+
+      </div>
+
+      <button id="convert">Convert</button>
+      <output id="conversionResult"></output>
+    </aside>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

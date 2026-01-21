@@ -1,1 +1,75 @@
-# Precision Calculator 🧮\n\nA **production‑grade Progressive Web App (PWA)** calculator with live currency conversion, offline support, keyboard-first UX, and a scalable design system.\n\nThis project was built to demonstrate **real-world frontend engineering practices** rather than tutorial-style code.\n\n---\n\n## 🚀 Live Features\n\n### ✅ Core Calculator\n- Accurate arithmetic operations\n- Keyboard support (numbers, operators, Enter, Backspace, Escape)\n- Safe expression evaluation (no raw `eval`)\n- Subtle micro-animations for professional UX feedback\n\n### 🌐 Live Currency Converter\n- Real-time exchange rates using a **free public API**\n- Clean async/await implementation\n- User-friendly loading & error states\n\n### 📴 Offline‑First Behavior\n- Automatically caches last successful exchange rates\n- Falls back to cached data when offline\n- User is never blocked by network issues\n\n### 🎨 Theme System\n- Dark / Light mode powered by CSS variables\n- One-click toggle\n- Theme preference persisted via `localStorage`\n\n### 📱 Progressive Web App (PWA)\n- Installable on desktop & mobile\n- Works offline\n- App manifest + service worker\n\n---\n\n## 🧠 Engineering Principles Used\n\n- **Separation of concerns** (UI, state, logic, side effects)\n- **Single source of truth** for application state\n- **Event delegation** instead of scattered listeners\n- **Progressive enhancement** (online → offline fallback)\n- **Design system mindset** using CSS variables\n- **Graceful degradation** instead of hard failures\n\nThis project intentionally avoids frameworks to showcase strong **vanilla JavaScript fundamentals**.\n\n---\n\n## 🧱 Tech Stack\n\n- **HTML5** — semantic & accessible markup\n- **CSS3** — design tokens, animations, responsive layout\n- **JavaScript (ES6+)** — state-driven logic, async/await\n- **Web APIs**\n  - `localStorage` (persistence & caching)\n  - `Service Worker` (offline support)\n  - `Fetch API` (live data)\n- **PWA Standards** (Manifest, installability)\n\n---\n\n## 📂 Project Structure\n\n`text\ncalculator/\n├── index.html\n├── styles.css\n├── app.js\n├── manifest.json\n├── service-worker.js\n├── icon-192.png\n└── icon-512.png\n`\n\n---\n\n## 🛠 How It Works (High-Level)\n\n1. **Calculator logic** is handled through a centralized state object\n2. User input (buttons or keyboard) updates state\n3. UI is re-rendered from state (predictable behavior)\n4. Currency conversion:\n   - Attempts live API fetch\n   - Saves rates to cache on success\n   - Uses cached data automatically when offline\n5. Service worker caches static assets for offline usage\n\n---\n\n## 🧪 How to Run Locally\n\n> ⚠️ PWA features require a local server (not `file://`)\n\n### Option 1: VS Code Live Server\n- Right-click `index.html` → **Open with Live Server**\n\n### Option 2: Python\n`bash\npython -m http.server\n`\nOpen: `http://localhost:8000`\n\n---\n\n## 📸 Screenshots\n> *(Add screenshots here for GitHub / portfolio)*\n\n---\n\n## 💡 What I Learned\n\n- Building resilient frontend apps that work **online & offline**\n- Designing UI systems that scale (themes, tokens)\n- Debugging real-world browser issues (PWA, caching, scope)\n- Writing maintainable JavaScript without frameworks\n- Thinking like a product engineer, not just a coder\n\n---\n\n## 🔮 Possible Improvements\n\n- Exchange-rate cache expiry (24h refresh logic)\n- Network status indicator (online/offline badge)\n- Accessibility audit (ARIA roles, contrast checks)\n- React / Next.js rewrite using same architecture\n- Monetization or white-label version\n\n---\n\n## 👤 Author\n\n**Aamad Aziz**\n\n- Frontend Developer\n- Focused on clean architecture, UX, and real-world problem solving\n\n---\n\n> This project was built intentionally without frameworks to highlight strong core web engineering skills.
+# Precision Calculator 🧮
+
+A **production-grade Progressive Web App (PWA)** calculator with live currency conversion, offline support, keyboard-first UX, and a scalable design system.
+
+This project was built to demonstrate **real-world frontend engineering practices** rather than tutorial-style code.
+
+---
+
+## 🚀 Live Features
+
+### ✅ Core Calculator
+- Accurate arithmetic operations  
+- Keyboard support (numbers, operators, Enter, Backspace, Escape)  
+- Safe expression evaluation (no raw `eval`)  
+- Subtle micro-animations for professional UX feedback  
+
+### 🌐 Live Currency Converter
+- Real-time exchange rates using a **free public API**  
+- Clean async/await implementation  
+- User-friendly loading & error states  
+
+### 📴 Offline-First Behavior
+- Automatically caches last successful exchange rates  
+- Falls back to cached data when offline  
+- User is never blocked by network issues  
+
+### 🎨 Theme System
+- Dark / Light mode powered by CSS variables  
+- One-click toggle  
+- Theme preference persisted via `localStorage`  
+
+### 📱 Progressive Web App (PWA)
+- Installable on desktop & mobile  
+- Works offline  
+- App manifest + service worker  
+
+---
+
+## 🧠 Engineering Principles Used
+
+- Separation of concerns (UI, state, logic, side effects)
+- Single source of truth for application state
+- Event delegation instead of scattered listeners
+- Progressive enhancement (online → offline fallback)
+- Design system mindset using CSS variables
+- Graceful degradation instead of hard failures
+
+This project intentionally avoids frameworks to showcase strong **vanilla JavaScript fundamentals**.
+
+---
+
+## 🧱 Tech Stack
+
+- **HTML5** — semantic & accessible markup  
+- **CSS3** — design tokens, animations, responsive layout  
+- **JavaScript (ES6+)** — state-driven logic, async/await  
+- **Web APIs**
+  - localStorage (persistence & caching)
+  - Service Worker (offline support)
+  - Fetch API (live data)
+- **PWA Standards** (Manifest, installability)
+
+---
+
+## 📂 Project Structure
+
+```text
+precision-calculator-pwa/
+├── index.html
+├── styles.css
+├── app.js
+├── manifest.json
+├── service-worker.js
+├── icon-192.png
+└── icon-512.png

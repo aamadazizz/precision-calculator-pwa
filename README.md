@@ -1,5 +1,8 @@
 # Precision Calculator 🧮
 
+🔗 **Live Demo:**  
+https://aamadazizz.github.io/precision-calculator-pwa/
+
 A **production-grade Progressive Web App (PWA)** calculator with live currency conversion, offline support, keyboard-first UX, and a scalable design system.
 
 This project was built to demonstrate **real-world frontend engineering practices** rather than tutorial-style code.
@@ -73,3 +76,4 @@ precision-calculator-pwa/
 ├── service-worker.js
 ├── icon-192.png
 └── icon-512.png
+
